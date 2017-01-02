@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.ico">
+		<title>iKBase</title>
+		<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/g.css" rel="stylesheet">
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<header class="headerDark">
+			<div class="container-fluid">
+				<h2 class="logo">
+                	<img src="img/logo.png">
+                </h2>
+				<div class="authentication">
+					<ul>
+						<li style="margin-top: 10px;">
+							<style>
+							.octicon-mark-github{
+							    display: inline-block;
+							    vertical-align: text-top;
+							    fill: currentColor;
+							    padding-bottom: 2px;
+							}
+							</style>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!-- container -->
+		<div class="main mainHome">
+			<section class="what">
+				<div class="container-fluid">
+					<div class="row">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+  	<div class="shard"></div>
+  	<div>
+		<div class="carousel-caption">
+        <h1></h1>
+        <h3></h3>
+      	</div>
+  	</div>
+    <div class="item active" urlw='480' urlh='600' url='http://sedn.egret.com/examples/dbdemo_1.4/release/index.html'>
+      <img src="img/ss/1.png" style="    width: 100%;"/>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+    <div class="item" urlw='480' urlh='600' url='http://edn.egret.com/cn/example/page/examples/1/160-db-mech/bin-release/web/001/index.html?v=1'>
+      <img src="img/ss/2.png" style="    width: 100%;"/>
+      <div class="carousel-caption">
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <img src="img/left.png"  />
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <img src="img/right.png"  />
+  </a>
+</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="fourCase">
+				<div class="container">
+					<h3>Support Git Server</h3>
+					<div class="texing22 texing">
+						<div class="" style="display: inline-block;">
+							<style>
+								.dbmoreItem {
+									padding-bottom: 25px;
+								}
+							</style>
+
+							<div class="col-xs-6 col-m-6 col-lg-4 dbmoreItem">
+								<div class="texing1">
+									<img src="img/case/1.png">
+									<span class="gongneng-name">&nbsp; GitHub</span>
+									<div class="gongneng-span-name">
+										<span class="span-name2">GitHub is a web-based Git repository hosting service. </span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-6 col-lg-4 dbmoreItem">
+								<div class="texing1 center-block">
+									<img src="img/case/2.png">
+									<span class="gongneng-name">&nbsp; Bitbucket</span>
+									<div class="gongneng-span-name">
+										<span class="span-name2">Bitbucket is a web-based hosting service for projects that use either the Mercurial or Git revision control systems.</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-6 col-lg-4 dbmoreItem">
+								<div class="texing1">
+									<img src="img/case/3.png">
+									<span class="gongneng-name">&nbsp; GitLab</span>
+									<div class="gongneng-span-name">
+										<span class="span-name2">GitLab is an open source application developed with Ruby on Rails that implements a self-hosted repository for Git projects that access public or private projects through the Web interface.</span>
+									</div>
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="footer2">
+				<div class="container-fluid">
+					ikbasecn@gmail.com
+				</div>
+			</section>
+			</div>
+	</body>
+</html>
+
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/html5media/1.1.8/html5media.js"></script>
+<script src="js/jquery.typetype.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/html5.js"></script>
+<script src="js/jquery.color-rgba-patch.js"></script>
+<script src="js/popwin.js"></script>
+<script type="text/javascript">
+
+	$(".demoWin").click(function() {
+		var item = $('.item.active')[0];
+			if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+				$(item).attr("urlw", document.body.clientWidth - 50);
+				$(item).attr("urlh", $(window).height());
+			}
+			var url = $(item).attr("url");
+			popWin.showWin($(item).attr("urlw"), $(item).attr("urlh"), -30, url);
+	})
+	
+	$(".tableDisplay").on("click", function(e) {
+		if($(".vCenter").is(":hidden")) {
+			$(".vCenter").show();
+			$(".downDisplay").show();
+			$(".headerDark").show();
+			$('.slider-video').trigger('pause');
+		}
+	});
+
+	$('#kaiyuan').typetype('Open Source').delay(500).backspace(25)
+		.typetype('Free').delay(500).backspace(25)
+		.typetype('Cross Platform').delay(500).backspace(25);
+	setInterval(function() {
+		$('#kaiyuan').typetype('Open Source').delay(500).backspace(25)
+			.typetype('Free').delay(500).backspace(25)
+			.typetype('Cross Platform').delay(500).backspace(25);
+	}, 1600);
+
+	window.onresize = function() {
+		
+	};
+
+	window.onload = function() {
+		ajaxJson();
+	};
+
+	function ajaxJson() {
+		$.getJSON('json/down.json', function(data) {
+			for(var i = 0; i < data.prerelease.length; i++) {
+				var item = $('[sys=' + data.prerelease[i].sys + ']')[0];
+				if(item) {
+					$(item).attr('href', data.prerelease[i].url);
+				}
+			}
+		});
+	}
+
+	
+</script>
